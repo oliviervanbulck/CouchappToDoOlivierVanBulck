@@ -16,10 +16,7 @@ function searchDoc(){
 
 function editDoc(id, rev, ingaveDatum, eindDatum, prioriteit, beschrijving, status){
     $('#edit').show();
-   
     var html = '';
-   
-    // Build edit form
     html += '<h3>Editeer record</h3><table class="table table-hover">';
     html += '<input type="hidden" id="_id" value="' + id + '"/>';
     html += '<input type="hidden" id="_rev" value="' + rev + '"/>';
@@ -30,12 +27,10 @@ function editDoc(id, rev, ingaveDatum, eindDatum, prioriteit, beschrijving, stat
     html += '<tr><td>Status:</td><td><input id="status" type="text" value="' + status + '"/></td></tr>';
     html += '<tr><td colspan="2" align="center"><button type="button" class="btn btn-primary" onClick="updateDoc()">Opslaan</button></td></tr>';
     html += '</table>';
-   
     $('#edit').html(html);
 }
 
 function updateDoc(){
-	   
     var id = $("#_id").val();
     var rev = $("#_rev").val();
     var ingaveDatum = $("#ingaveDatum").val();
@@ -45,7 +40,6 @@ function updateDoc(){
     var status = $("#status").val();
 
     var doc = {};
-
     doc._id = id;
     doc._rev = rev;
     doc.ingaveDatum = ingaveDatum;
