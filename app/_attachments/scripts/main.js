@@ -1,5 +1,5 @@
+//Zoek naar document
 function searchDoc(){
-   
     var id = $("#todoId").val();
    
     $.ajax({
@@ -14,6 +14,7 @@ function searchDoc(){
     });   
 }
 
+//Wijzig gevonden document
 function editDoc(id, rev, ingaveDatum, eindDatum, prioriteit, beschrijving, status){
     $('#edit').show();
     var html = '';
@@ -30,6 +31,7 @@ function editDoc(id, rev, ingaveDatum, eindDatum, prioriteit, beschrijving, stat
     $('#edit').html(html);
 }
 
+//Update gewijzigd document
 function updateDoc(){
     var id = $("#_id").val();
     var rev = $("#_rev").val();
